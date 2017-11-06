@@ -4,7 +4,7 @@
 \section{Pregled snovi}
 \label{sec:polinomi-pregled-snovi}
 
-Foo.
+Pregled snovi.
 
 \section{Vaje}
 \label{sec:polinomi-funkcije-vaje}
@@ -13,8 +13,18 @@ Foo.
 % Odpremo datoteko, v katero se bodo zapisali odgovori za
 % to poglavje.
 
-% TO ZAENKRAT NE DELUJE
-\Opensolutionfile{odgovor}[odgovori-polinomi]
+% Določimo ime datoteke, v katero se bodo pisali odgovori.
+% Vsako poglavje mora imeti svojo datoteko.
+\def\datotekaOdgovori{odgovori-polinomi}
+
+% Odpremo datoteko z odgovori.
+\Opensolutionfile{odgovor}[\datotekaOdgovori]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% VAJE
+%
+% Sem vstavimo vaje s pomočjo okolja "vaja". Odgovor napišemo v vajo,
+% v okolje "odgovor".
 
 \begin{vaja}
   Poiščite ničle polinoma $x^3 + 3 x + 1$.
@@ -24,6 +34,18 @@ Foo.
   \end{odgovor}
 \end{vaja}
 
+\begin{vaja}
+  Še ena vaja.
+
+  \begin{odgovor}
+    Rešitev bi bila tu.
+  \end{odgovor}
+\end{vaja}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Treba je zapredi datoteko z odgovori
+
+\Closesolutionfile{odgovor}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Odgovori
@@ -31,9 +53,8 @@ Foo.
 \section{Odgovori}
 \label{sec:polinomi-odgovori}
 
-\Closesolutionfile{odgovori-polinomi}
-\Readsolutionfile{odgovori-polinomi}
-
+% Vključimo odgovore.
+\input{\datotekaOdgovori}
 
 
 %%% Local Variables:

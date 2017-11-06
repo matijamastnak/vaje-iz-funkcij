@@ -30,21 +30,17 @@ Micka Kovačeva
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % OKOLJA ZA IZREKE, DEFINICIJE, ...
 
-{\theoremstyle{theorem}
-}
-
-{\theoremstyle{definition}
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Okolje za vaje in rešitve
 
 {\theoremstyle{definition}
 \newtheorem{vaja}{Vaja}[chapter]
-\newtheorem{preodgovor}{Odgovor}
+%\newtheorem{preodgovor}{Odgovor}
 }
 
-\Newassociation{odgovor}{preodgovor}{odgovor}
+\Newassociation{odgovor}{Odg}{odgovor}
+\renewcommand{\Odglabel}[1]{\textbf{Odgovor #1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MAKROJI
@@ -55,7 +51,15 @@ Micka Kovačeva
 
 \maketitle
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% KAZALO
+
+\setcounter{tocdepth}{0} % Prikaži samo poglavja (nastavi na 1 za razdelke)
+
 \tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% VSEBINA
 
 \input{uvod.tex}
 \input{polinomi.tex}
