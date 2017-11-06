@@ -1,0 +1,64 @@
+\documentclass{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAKETI
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[slovene]{babel}
+
+% Matematika
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% Risanje slik
+\usepackage{tikz}
+
+% Vaje z rešitvami
+\usepackage{answers}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NASLOV, AVTORJI
+\title{Vaje iz funkcij}
+
+\author{%
+Andrej Bauer \and
+Micka Kovačeva
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% OKOLJA ZA IZREKE, DEFINICIJE, ...
+
+{\theoremstyle{theorem}
+}
+
+{\theoremstyle{definition}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Okolje za vaje in rešitve
+
+{\theoremstyle{definition}
+\newtheorem{vaja}{Vaja}[chapter]
+\newtheorem{preodgovor}{Odgovor}
+}
+
+\Newassociation{odgovor}{preodgovor}{odgovor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAKROJI
+
+\input{macros.tex}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\input{uvod.tex}
+\input{polinomi.tex}
+
+
+\end{document}
