@@ -1,6 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Množice
 
+% Makro za množice je \set.
+% Podamo mu lahko en izbirni argument v oglatih oklepajih []
+% in enega ali dva obvezna argumenta v zavitih oklepajih {}.
+% Izbirni argument je velikost zavitih oklepajev v zapisu množice.
+% Dan je kot število od 0 do 4.
+% Če ga ne podamo, se velikost zavitih oklepajev samodejno prilagodi vsebini.
+% Če podamo samo en obvezni argument, se množica zapiše kot zaporedje elementov v zavitih oklepajih.
+% Če podamo dva obvezna argumenta, se ta dva izpišeta, ločena z navpično črto in obdana z zavitimi oklepaji.
+% Primer:
+% \set{1, 2, 3}  izpiše  {1, 2, 3}.
+% \set{x \in \RR}{x \geq 0}  izpiše  {x ∈ ℝ | x ≥ 0}.
+
 \newcommand{\sizedescriptor}[2]
 {
 \ifthenelse{\equal{#1}{0}}{}{
