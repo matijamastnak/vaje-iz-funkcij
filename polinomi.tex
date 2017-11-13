@@ -4,7 +4,65 @@
 \section{Pregled snovi}
 \label{sec:polinomi-pregled-snovi}
 
-Foo.
+\subsection{Definicija polinoma}
+Polinom je vsaka taka funkcija, ki jo lahko zapišemo v obliki:
+\[
+p(x)=a_nx^n + a_{n-1}x^{n-1}+ \cdots + a_2x^2 + a_1 x + a_0
+\]
+Pri tem naravno število n imenujemo stopnja polinoma oz. st(p), koeficienti $ a_j$ so realna števila, koeficient $ a_n$ (tj. tisti, pri najvišji potenci) imenujemo vodilni koeficient, $ a_0$ pa \textbf{prosti člen}.
+\subsection{Posebni primeri}
+\begin{itemize}
+\item Polinom ničte stopnje je konstantni polinom, p(x)=a. V primeru a=0, ga imenujemo ničelni polinom.
+\item Polinom prve stopnje je linearna funkcija, p(x)=kx + n
+\item Polinom druge stopnje je kvadratna funkcija.
+\end{itemize}
+\subsection{Računske operacije s polinomi}
+Vrednost polinoma v danem številu dobimo tako, da v polinom vstavimo to število. Tako kot vse funkcije lahko tudi polinome seštevamo, odštevamo, množimo in delimo (paziti moramo le na deljenje z 0). Veljajo pravila:
+
+Recimo: $ p(x)=a_nx^n + a_{n-1}x^{n-1}+ \cdots + a_2x^2 + a_1 x + a_0$  in   q(x)=b_nx^n + b_{n-1}x^{n-1}+ \cdots + b_2x^2 + b_1 x + b_0$
+$p(x) + q(x) = (p+q)(x) =(a_n + b_n)x^n + (a_{n-1}+b_{n-1)}x^{n-1}+ \cdots +(a_2 + b_2)x^2 +( a_1 + b_1) x + (a_0+b_0)$
+
+Podobne formule dobimo tudi za $(p-q)(x), (p*q)(x), (\frac{p}{q})(x)$.
+\subsection{Osnovni izrek o deljenju polinomov}
+Vsak polinom p(x) (deljenec), lahko delimo s poljubnim neničelnim polinomom q(x) (deljitelj). Zapišemo ju lahko v obliko $p(x)=k(x)*q(x) + o(x)$, pri čemer je $k(x)$ polinom količnik, $o(x)$ pa polinom ostanek. Velja tudi $st(o)< st(q)$. Deljenje polinoma p(x) z polinomom q(x)=x-a, kjer je a neko število, lahko krajše napišemo s Hornerjevim algoritmom.
+
+\subsection{Razcep polinoma, iskanje ničel}
+V primeru, ko je število a ničla polinoma p, je ostanek pri deljenju polinoma p z (x-a) enak 0, zato lahko zapišemo $p(x)= k(x)*(x-a)$ postopek ponavljamo, sedaj na k(x). Tako lahko polinom zapišemo v \textbf{ničelno obliko}: 
+\[
+p(x)= a_n*(x-x_1)(x-x_2)(x-x_3)\cdots(x-x_n)
+\]
+Pri tem je $a_n$ vodilni koeficient, $x_i$ pa ničle polinoma p(x). V splošnem so te ničle lahko tudi nerealne. v tem primeru nastopajo v konjugiranih parih. Velja tudi st(p)=n. Ta zapis nam omogoča Gaussov izrek: Vsak nekonstanten polinom ima v $\mathbb{C}$ vsaj eno ničlo.
+
+Za iskanje ničel poznamo več metod:
+\begin{itemize}
+\item Najlažji se zdi \textbf{razcep polinoma}, kjer se držimo pravil za razcep izrazov. Iz te oblike lahko enostavno razberemo ničle, a se metode ne da enostavno uporabiti pri vseh izrazih.
+\item Ugibamo možne ničle in jih potem preverimo s \textbf{Hornerjevim algoritmom}. Pri tem upoštevamo dve pravili: cele ničle polinoma, ki ima le cele koeficiente, iščemo le med deljitelji prostega člena ter kandidati za racionalne ničle polinoma s celimi koeficienti so le ulomki, ki imajo v števcu deljitelj prostega člena, v imenovalcu pa deljitelj vodilnega člena.
+\item Zgornji metodi nista vedno uporabni, ostaja nam možnost uporabe numeričnih metod (za približke ničel), npr. \textbf{metoda bisekcije}:\begin{enumerate}
+\item Najprej poiščemo interval [a, b] na katerem polinom spremeni predznak (tj. da sta vrednosti polinoma v krajiščih različno predznačeni).
+\item Izračunamo razpolovišče intervala: $c=\frac{a+b}{2}$
+\item Izračunamo p(c). Če je vrednost enaka 0, smo dobili ničlo in postopek je uspešno zaključen. Če dobimo neničelno vrednost, moramo ugotoviti, na katerem od intervalov [a, c] ali [c, b] polinom spremeni predznak. Postopek ponovimo na tem intervalu. Večkrat kot ponovimo postopek, bolj natančen bo naš približek za ničlo. 
+\end{enumerate}
+\end{itemize}
+
+\subsection{Graf polinoma}
+Za risanje grafa moramo prej izračunati nekaj podatkov:
+\begin{itemize}
+\item Ničle polinoma, so presečišča grafa z abscisno osjo. Najdemo jih po zgoraj opisanih postopkih. Pri tem upoštevamo, da je pomembna tudi stopnja ničel. 
+\begin{itemize}
+\item V \textbf{enostavnih} ničlah (ničle prve stopnje) graf seka absciso pod nekim kotom.
+\item V ničlah \textbf{sode} stopnje se graf abscise le dotakne, v tisti točki je tangent na graf enaka abscisi.
+\item V ničlah \textbf{lihe} stopnje, večje od 1, graf seka absciso, a se ji v ničli lepo prilega in je vodoraven. Graf ima v tej ničli vodoravni prevoj.
+\end{itemize}
+\item \textbf{Začetna vrednost} je presečišče grafa z ordinatno osjo. Izračunamo jo kot p(0) in opazimo, da je enaka prostemu členu.
+\item Zavedati se moramo, da je polinom zvezna funkcija, to pomeni, da je njen graf napretrgana krivulja. 
+\item Ko gre $x\to \pm \infty$  je graf polinoma podoben grafu vodilnega člena, torej $a_nx^n$:
+\begin{enumerate}
+\item Če je n liho število, se predznak grafa zamenja v neskončnosti. Če je $a_ n$ pozitiven, graf narašča, če je negativen, pa pada.
+\item Če je n sodo število, se predznak grafa ohrani. Če je $a_ n$ pozitiven, se graf prične in konča v pozitivni smeri, če pa je negativen, se prične in konča v $-\infty$.
+\end{enumerate}
+\item Za podrobnejši graf moramo pogledati tudi odvod polinoma p'(x). Stacionarne točke so vsi x, ki rešijo enačbo $p'(x)=0$. Če odvod v x spremeni predznak iz pozitivnega na negativni, ima graf v x lokalni maksimum, v obratnem primeru pa lokalni minimum. Če predznaka ne spremeni, garf v x nima ekstrema. Velja namreč, da na območju, kjer $p'(x) >0$ graf narašča, kjer $p'(x)<0$ pa graf pada.
+\end{itemize}
+
 
 \section{Vaje}
 \label{sec:polinomi-funkcije-vaje}
