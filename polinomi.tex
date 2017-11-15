@@ -17,10 +17,12 @@ Foo.
 \Opensolutionfile{odgovor}[odgovori-polinomi]
 
 \begin{vaja}
-  Poiščite ničle polinoma $x^3 + 3 x + 1$.
+Z razcepom izračunaj ničle polinoma (tudi nerealne):
+$x^3-2x^2-9x+18$.
 
   \begin{odgovor}
-    Grozna rešitev.
+ Najprej preverimo, če lahko polinom razstavimo. V tem primeru vidimo, da lahko izpostavimo: $x(x^2-9) - 2(x^2-9)$. Nato še izpostavimo $x^2-9$ in ga razstavimo po razliki kvadratov ter dobimo razcepljen polinom:
+$p(x) = (x-2)(x-3)(x+3)$. Zdaj lahko preberemo ničle, ki so: $x_1=2, x_2=3 in x_3=-3$.
   \end{odgovor}
 \end{vaja}
 
@@ -32,7 +34,10 @@ Foo.
 \label{sec:polinomi-odgovori}
 
 \Closesolutionfile{odgovori-polinomi}
-\Readsolutionfile{odgovori-polinomi}
+
+\input{odgovori-polinomi.tex}
+
+%\Readsolutionfile{odgovori-polinomi}
 
 
 
