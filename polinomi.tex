@@ -34,6 +34,27 @@ $p(x) + q(x) = (p+q)(x) =(a_n + b_n)x^n +\cdots +(a_2 + b_2)x^2 +( a_1 + b_1) x 
 Podobne formule dobimo tudi za $(p-q)(x), (p*q)(x), (\frac{p}{q})(x)$.
 \subsection{Osnovni izrek o deljenju polinomov}
 Vsak polinom p(x) (deljenec), lahko delimo s poljubnim neničelnim polinomom q(x) (deljitelj). Zapišemo ju lahko v obliko $\textbf{p(x)=k(x)*q(x) + o(x)}$, pri čemer je $k(x)$ polinom količnik, $o(x)$ pa polinom ostanek. Velja tudi $\textbf{st(o)< st(q)}$. Deljenje polinoma p(x) z polinomom q(x)=x-a, kjer je a neko število, lahko krajše napišemo s Hornerjevim algoritmom.
+\subsection{Razcep polinoma, iskanje ničel}
+V primeru, ko je število a ničla polinoma p, je ostanek pri deljenju polinoma p z (x-a) enak 0, zato lahko zapišemo $p(x)= k(x)*(x-a)$ postopek ponavljamo, sedaj na k(x). Tako lahko polinom zapišemo v \textbf{ničelno obliko}: 
+\[
+p(x)= a_n*(x-x_1)(x-x_2)(x-x_3)\cdots(x-x_n)
+\]
+Pri tem je $a_n$ \textbf{vodilni koeficient}, $x_i$ pa \textbf{ničle} polinoma p(x). V splošnem so te ničle lahko tudi nerealne. V tem primeru nastopajo v konjugiranih parih. Velja tudi \textbf{st(p)=n}. Ta zapis nam omogoča \textbf{Gaussov izrek}: Vsak nekonstanten polinom ima v $\mathbb{C}$ vsaj eno ničlo.
+
+Za iskanje ničel poznamo več metod:
+\begin{itemize}
+\item Najlažji se zdi \textbf{razcep polinoma}, kjer se držimo pravil za razcep izrazov. Iz te oblike lahko enostavno razberemo ničle, a se metode ne da enostavno uporabiti pri vseh izrazih.
+\item Ugibamo možne ničle in jih potem preverimo s \textbf{Hornerjevim algoritmom}. Pri tem upoštevamo dve pravili: 
+\begin{itemize}
+\item Cele ničle polinoma, ki ima le cele koeficiente, iščemo le med deljitelji prostega člena 
+\item Kandidati za racionalne ničle polinoma s celimi koeficienti so le ulomki, ki imajo v števcu deljitelj prostega člena, v imenovalcu pa deljitelj vodilnega člena.
+\end{itemize}
+\item Zgornji metodi nista vedno uporabni, ostaja nam možnost uporabe numeričnih metod (za približke ničel), npr. \textbf{metoda bisekcije}:\begin{enumerate}
+\item Najprej poiščemo interval [a, b] na katerem polinom spremeni predznak (tj. da sta vrednosti polinoma v krajiščih različno predznačeni).
+\item Izračunamo razpolovišče intervala: $c=\frac{a+b}{2}$
+\item Izračunamo p(c). Če je vrednost enaka 0, smo dobili ničlo in postopek je uspešno zaključen. Če dobimo neničelno vrednost, moramo ugotoviti, na katerem od intervalov [a, c] ali [c, b] polinom spremeni predznak. Postopek ponovimo na tem intervalu. Večkrat kot ponovimo postopek, bolj natančen bo naš približek za ničlo. 
+\end{enumerate}
+\end{itemize}
 
 
 
