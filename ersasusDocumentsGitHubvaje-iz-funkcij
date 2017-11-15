@@ -1,0 +1,84 @@
+[33mcommit 37ac9ada38be673a90ad515dcbcabd4f7b112079[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 12df057 6c7dd7e
+Author: nina.kosmrlj <nina.kosmrlj@student.fmf.uni-lj.si>
+Date:   Mon Nov 13 11:18:52 2017 +0100
+
+    Merge branch 'master' of https://github.com/andrejbauer/vaje-iz-funkcij
+
+[33mcommit 12df05782f72b3102d86da68ce669de457f09a8a[m
+Author: nina.kosmrlj <nina.kosmrlj@student.fmf.uni-lj.si>
+Date:   Mon Nov 13 10:49:06 2017 +0100
+
+    dodan uvod v polinome
+
+[33mcommit 6c7dd7ef46fac90c6ff3a7bae7b703dd4076bbda[m[33m ([m[1;31mupstream/master[m[33m)[m
+Merge: b95628b 6a7c59d
+Author: ninakosmrlj <nina.kosmrlj@student.fmf.uni-lj.si>
+Date:   Mon Nov 13 10:41:34 2017 +0100
+
+    Merge pull request #25 from andrejbauer/boljsa-pisava
+    
+    Nastavi boljšo pisavo (Palatino), close #12
+
+[33mcommit 6a7c59d8305724a3fef42a8cb181be482ec182bf[m
+Author: Andrej Bauer <Andrej.Bauer@andrej.com>
+Date:   Mon Nov 13 10:39:00 2017 +0100
+
+    Posloveni komentar.
+
+[33mcommit d268ce0b8d924572e5f371319ffc4f95290bb75b[m
+Author: Andrej Bauer <Andrej.Bauer@andrej.com>
+Date:   Wed Nov 8 21:47:32 2017 +0100
+
+    Nastavi boljšo pisavo (Palatino), close #12
+
+[33mcommit b95628bffffce06f10f55fcc6d2bdbf89c3cb143[m
+Merge: 7834fda b185f25
+Author: Kataja20 <katja.albreht.soncek@gmail.com>
+Date:   Wed Nov 8 12:36:19 2017 +0100
+
+    Merge pull request #16 from davorinlesnik/master
+    
+    Dodan makro za množice.
+
+[33mcommit b185f25263c54c2b2c2de7487efb26aad489f9a2[m
+Author: Davorin Lešnik <davorin.lesnik@fmf.uni-lj.si>
+Date:   Wed Nov 8 12:33:47 2017 +0100
+
+    Dodana dokumentacija za makro \set.
+
+[33mcommit 35bdc87dfec2839ff45a872c892f5bfdf7b4e563[m
+Author: Davorin Lešnik <davorin.lesnik@fmf.uni-lj.si>
+Date:   Wed Nov 8 11:55:49 2017 +0100
+
+    Dodan makro za množice.
+
+[33mcommit 7834fdaf804c80bb68b2474ae31b499edd4a676f[m
+Author: Andrej Bauer <Andrej.Bauer@andrej.com>
+Date:   Mon Nov 6 14:01:33 2017 +0100
+
+    Ignoriraj datoteko z odgovori.
+
+[33mcommit 1e661385e037902707965ba33b8b82780e8c38f2[m
+Author: Andrej Bauer <Andrej.Bauer@andrej.com>
+Date:   Mon Nov 6 14:01:11 2017 +0100
+
+    Nastavki za preostali dve poglavji.
+
+[33mcommit b16d007a6b1f39336b8bf746131e7b949548d3e7[m
+Author: Andrej Bauer <Andrej.Bauer@andrej.com>
+Date:   Mon Nov 6 13:54:19 2017 +0100
+
+    Delujoči odgovori.
+
+[33mcommit 6ce12ef92506ac414d03345b672ddb31e44980be[m
+Author: Andrej Bauer <Andrej.Bauer@andrej.com>
+Date:   Mon Nov 6 11:47:11 2017 +0100
+
+    Osnovni skelet.
+
+[33mcommit 1038ca10b769458fc7cbb4e21eb3ae856cb28987[m
+Author: Andrej Bauer <Andrej.Bauer@andrej.com>
+Date:   Mon Nov 6 10:24:57 2017 +0100
+
+    Initial commit
