@@ -1,3 +1,4 @@
+% !Tex root = vaje.tex
 \chapter{Polinomi}
 \label{cha:polinomi}
 
@@ -13,8 +14,13 @@ Foo.
 % Odpremo datoteko, v katero se bodo zapisali odgovori za
 % to poglavje.
 
-% TO ZAENKRAT NE DELUJE
-\Opensolutionfile{odgovor}[odgovori-polinomi]
+% Določimo ime datoteke, v katero se bodo pisali odgovori.
+% Vsako poglavje mora imeti svojo datoteko.
+\def\datotekaOdgovori{odgovori-polinomi}
+
+% Odpremo datoteko z odgovori.
+\Opensolutionfile{odgovor}[\datotekaOdgovori]
+
 
 \begin{vaja}
 Zgled risanja polinomov:
@@ -98,7 +104,10 @@ Približna vrednost znaša $x\doteq -1,063$.
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Treba je zapredi datoteko z odgovori
 
+\Closesolutionfile{odgovor}
 
 
 
@@ -108,11 +117,8 @@ Približna vrednost znaša $x\doteq -1,063$.
 \section{Odgovori}
 \label{sec:polinomi-odgovori}
 
-\Closesolutionfile{odgovori-polinomi}
-
-\input{odgovori-polinomi.tex}
-
-%\Readsolutionfile{odgovori-polinomi}
+% Vključimo odgovore.
+\input{\datotekaOdgovori}
 
 
 
