@@ -1,11 +1,10 @@
-% !Tex root = vaje.tex
+% !TeX root = vaje.tex
 \chapter{Polinomi}
 \label{cha:polinomi}
 
 \section{Pregled snovi}
 \label{sec:polinomi-pregled-snovi}
 
-<<<<<<< HEAD
 
 \subsection{Definicija polinoma}
 Polinom je vsaka taka funkcija, ki jo lahko zapišemo v obliki:
@@ -79,9 +78,6 @@ Za risanje grafa moramo prej izračunati nekaj podatkov:
 
 
 
-=======
-Foo.
->>>>>>> c1f21dc090af4b2aa6cac2d89092de9138a62e4e
 
 \section{Vaje}
 \label{sec:polinomi-funkcije-vaje}
@@ -97,9 +93,13 @@ Foo.
 % Odpremo datoteko z odgovori.
 \Opensolutionfile{odgovor}[\datotekaOdgovori]
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% VAJE
+%
+% Sem vstavimo vaje s pomočjo okolja "vaja". Odgovor napišemo v vajo,
+% v okolje "odgovor".
 
 \begin{vaja}
-<<<<<<< HEAD
   Dani so polinomi: $\textbf{p(x)}=6x^5+7x^4+2x^3+x+4$ , 
 $\textbf{q(x)}=3x^6~+~12x^4~+~2x^3~+~4x^2~+~2$ in $\textbf{r(x)}=x+2$
 
@@ -157,46 +157,10 @@ $p(x)=2x^4-4x^3-14x^2+16x+24$
 
   \begin{odgovor}
     $p(x)=2(x-2)(x+2)(x-3)(x+1)$
-=======
-Zgled risanja polinomov:
-Narišite graf polinoma $p(x)=x^3-3x+2$.
-Potrebujemo:
-\begin{itemize}
-\item začetno vrednost
-\item ničle polinoma
-\item kako se funkcija obnaša v neskončnosti
-\item ekstreme funkcije
-\end{itemize}
-
-Začetna vrednost je enaka $p(0)=2$
-Da dobimo ničle, polinom najprej razstavimo s pomočjo Hornerjevega algoritma in dobimo 3 ničle:
-$x_{1,2}=1$ (soda) in $x_3=-2$ (liha). Pri sodi ničli se funkcija samo dotakne $x-osi$ in je ne seka, pri lihi pa
-funkcija seka $x-os$.
-Nato še pogledamo, kako se funkcija obnaša na robovih definicijskega območja. Vidimo, da pri $+\infty$ se graf bliža $+\infty$,
-pri $-\infty$ pa $-\infty$.
-Zanimajo nas še lokalni ekstremi funkcije, zato izračunamo odvod funkcije: $p\prime(x)=3x^2-3$. Zanima nas, kdaj je enak $0$. Dobimo enačbo $3x^2-3=0$ in dobimo rešitvi $x_1=1$ in $x_2=-1$. Izračunamo še vrednost funkcije v teh točkah in narišemo graf $p(x)$.
-% graf p(x)
-\end{vaja}
-
-\begin{vaja}
-1. naloga iz risanja polinomov:
-Narišite graf polinoma $p(x)=-6x^3+21x^2-21x+6$. Pokažite, da v točki z absciso $\frac{3}{2}$ graf polinoma 
-seka simetralo lihih kvadrantov. Zapišite še preostali presečišči grafa polinoma s simetralo lihih kvadrantov.
-
-
-
-  \begin{odgovor}
-1. naloga: %128.naloga
-
->>>>>>> c1f21dc090af4b2aa6cac2d89092de9138a62e4e
   \end{odgovor}
-
 \end{vaja}
 
-
-
 \begin{vaja}
-<<<<<<< HEAD
   Dan je polinom $\textbf{p(x)}= x^3-2x^2-4x+8$.
 \begin{enumerate}
 \item Izračunal ničle p(x) ter začetno vrednost p(0)!
@@ -314,59 +278,17 @@ Približna vrednost znaša $x\doteq -1,063$.
 
 =======
   Še ena vaja.
-=======
->>>>>>> c1f21dc090af4b2aa6cac2d89092de9138a62e4e
 
-Zgled bisekcije:
-Poiščimo iracionalno ničlo $x_0$ polinoma $p(x)=x^5+2x-1$ na desetinko natančno.
-
-Najprej izberemo začetni interval $[a,b]$, da je $p(a)p(b)<0$. Ker je $p(0)=-1<0$ in $p(1)=2>0$, 
-vemo, da je ničla nekje na intervalu $[0,1] \Rightarrow$ \\
-ničla bo $0,...$ Razpolovna točka tega intervala je $0,5$. \\
-$p(0,5)\doteq 0,03>0$, torej je ničla na intervalu $[0;0,5] \Rightarrow$ \\
-
-ničla bi $0,0...$ ali $0,1...$ ali $0,2...$ ali $0,3...$ ali $0,4...$ Razpolovna točka tega intervala je $0,25$.
-
-$p(0,25)\doteq-0,5<0$, torej je ničla na intervalu $[0,25;0,5] \Rightarrow$ \\
-ničla bo $0,2...$ ali $0,3...$ ali $0,4...$ Razpolovna točka tega intervala je $0,375$.
-
-$p(0,375)\doteq -0,24<0$, torej je ničla na intervalu $[0,375;0,5] \Rightarrow$ \\
-ničla bo $0,3...$ ali $0,4...$ Razpolovna točka tega intervala je $0,4375$.
-
-$p(0,4375)\doteq -0,11<0$, torej je ničla na intervalu $[0,4375;0,5] \Rightarrow$ \\
-ničla bo $0,4...$ (prvo decimalno mesto je znano). Razpolovna točka je $0,46875$.
-
-$p(0,46875)\doteq -0,04<0$, torej je ničla na intervalu $[0,46875;0,5] \Rightarrow$ \\
-ničla bo $0,46...$ ali $0,47...$ ali $0,48...$ ali $0,49$...
-
-Bisekcijo bi lahko še nadaljevali in bi dobili še naslednja decimalna mesta.
-Iracionalna ničla danega polinoma je med $0,47$ in $0,50$.
-
-
-
+  \begin{odgovor}
+    Rešitev bi bila tu.
+  \end{odgovor}
 \end{vaja}
-
-\begin{vaja}
-Dan je polinom $p(x)=4x^3-2x^2-x+6$. Z bisekcijo na štiri mesta natančno poiščite ničlo
-polinoma $p$ na intervalu $[-2,-1]$.
-
-
-\begin{odgovor}
-Približna vrednost znaša $x\doteq -1,063$.
-\end{odgovor}
-
-\end{vaja}
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Treba je zapredi datoteko z odgovori
 
 \Closesolutionfile{odgovor}
 >>>>>>> ad5f6411d5c71010d912b3a4a0d75c460da122d8
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Odgovori
@@ -385,7 +307,6 @@ Približna vrednost znaša $x\doteq -1,063$.
 % Vključimo odgovore.
 \input{\datotekaOdgovori}
 >>>>>>> ad5f6411d5c71010d912b3a4a0d75c460da122d8
-
 
 
 %%% Local Variables:
