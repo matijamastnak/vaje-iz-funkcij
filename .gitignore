@@ -218,3 +218,7 @@ TSWLatexianTemp*
 
 # expex forward references with \gathertags
 *-tags.tex
+/odgovori-explog.tex
+/odgovori-sincos.tex
+/vaje.pdf
+/odgovori-polinomi.tex

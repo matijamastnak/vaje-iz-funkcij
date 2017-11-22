@@ -1,0 +1,65 @@
+% !TeX root = vaje.tex
+
+\chapter{Kotne funkcije}
+\label{cha:sin-cos}
+
+\section{Pregled snovi}
+\label{sec:sin-cos-pregled-snovi}
+
+Pregled snovi.
+
+\section{Vaje}
+\label{sec:sin-cos-vaje}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Odpremo datoteko, v katero se bodo zapisali odgovori za
+% to poglavje.
+
+% Določimo ime datoteke, v katero se bodo pisali odgovori.
+% Vsako poglavje mora imeti svojo datoteko.
+\def\datotekaOdgovori{odgovori-sincos}
+
+% Odpremo datoteko z odgovori.
+\Opensolutionfile{odgovor}[\datotekaOdgovori]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% VAJE
+%
+% Sem vstavimo vaje s pomočjo okolja "vaja". Odgovor napišemo v vajo,
+% v okolje "odgovor".
+
+\begin{vaja}
+  Izračunajte $\sin(1928398213 \pi)$.
+
+  \begin{odgovor}
+    $0$.
+  \end{odgovor}
+\end{vaja}
+
+\begin{vaja}
+  Še ena vaja.
+
+  \begin{odgovor}
+    Rešitev bi bila tu.
+  \end{odgovor}
+\end{vaja}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Treba je zapredi datoteko z odgovori
+
+\Closesolutionfile{odgovor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Odgovori
+
+\section{Odgovori}
+\label{sec:sincos-odgovori}
+
+% Vključimo odgovore.
+\input{\datotekaOdgovori}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "vaje"
+%%% End:
