@@ -40,7 +40,31 @@ funkcija seka $x-os$.
 Nato še pogledamo, kako se funkcija obnaša na robovih definicijskega območja. Vidimo, da pri $+\infty$ se graf bliža $+\infty$,
 pri $-\infty$ pa $-\infty$.
 Zanimajo nas še lokalni ekstremi funkcije, zato izračunamo odvod funkcije: $p\prime(x)=3x^2-3$. Zanima nas, kdaj je enak $0$. Dobimo enačbo $3x^2-3=0$ in dobimo rešitvi $x_1=1$ in $x_2=-1$. Izračunamo še vrednost funkcije v teh točkah in narišemo graf $p(x)$.
-%narisi graf p(x)!!!
+
+
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+
+\begin{tikzpicture}[scale=0.3][line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+
+\draw [color=cqcqcq,, xstep=2cm,ystep=2cm] (-20.867622516121354,-16.60212053777514) grid (30.25787851421771,15.368179578822133);
+
+\draw[->,color=black] (-20.867622516121354,0) -- (30.25787851421771,0);
+\foreach \x in {-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0,-16.60212053777514) -- (0,15.368179578822133);
+\foreach \y in {-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};\clip(-20.867622516121354,-16.60212053777514) rectangle (30.25787851421771,15.368179578822133);
+\draw[line width=2pt,color=qqwuqq,smooth,samples=100,domain=-7.867622516121354:7.25787851421771] plot(\x,{(\x)^(3)-3*(\x)+2});
+
+\begin{scriptsize}
+\draw[color=qqwuqq] (-2.5555202341463437,-16.045675440809045) node {$f$};
+\end{scriptsize}
+
+\end{tikzpicture}
+
+
 \end{vaja}
 
 \begin{vaja}
