@@ -75,7 +75,44 @@ seka simetralo lihih kvadrantov. Zapišite še preostali presečišči grafa pol
 
 
   \begin{odgovor}
-1. naloga: %128.naloga
+1. naloga:
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+
+\begin{tikzpicture}[scale=0.4][line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+
+\draw [color=cqcqcq,, xstep=1cm,ystep=1cm] (-8.226282194778076,-8.992315196953571) grid (18.36150796473655,7.633822712822063);
+\draw[->,color=black] (-8.226282194778076,0) -- (18.36150796473655,0);
+\foreach \x in {-8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0,-8.992315196953571) -- (0,7.633822712822063);
+\foreach \y in {-8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-8.226282194778076,-8.992315196953571) rectangle (18.36150796473655,7.633822712822063);
+\draw[line width=1pt,color=qqwuqq,smooth,samples=100,domain=-1.226282194778076:3.36150796473655] plot(\x,{0-6*(\x)^(3)+21*(\x)^(2)-21*(\x)+6});
+
+\begin{scriptsize}
+
+\draw[color=qqwuqq] (0.17447736089969768,7.554901172111102) node {$f$};
+\draw [fill=uuuuuu] (0.7257081148225683,-0.4733477320806738) circle (2pt);
+\draw [fill=uuuuuu] (1.6076252185107651,1.5844588431917899) circle (2pt);
+\draw [fill=uuuuuu] (0.7257081148225683,-0.4733477320806738) circle (2pt);
+\draw [fill=uuuuuu] (1.6076252185107651,1.5844588431917899) circle (2pt);
+\draw [fill=uuuuuu] (0.7257081148225683,-0.4733477320806738) circle (2pt);
+\draw [fill=uuuuuu] (1.6076252185107651,1.5844588431917899) circle (2pt);
+\draw [fill=uuuuuu] (0.7257081148225683,-0.4733477320806738) circle (2pt);
+\draw [fill=uuuuuu] (1.6076252185107651,1.5844588431917899) circle (2pt);
+\draw [fill=uuuuuu] (0.7257081148225683,-0.4733477320806738) circle (2pt);
+\draw [fill=uuuuuu] (1.6076252185107651,1.5844588431917899) circle (2pt);
+\draw [fill=uuuuuu] (0.7257081148225683,-0.4733477320806738) circle (2pt);
+\draw [fill=uuuuuu] (1.6076252185107651,1.5844588431917899) circle (2pt);
+
+\end{scriptsize}
+
+\end{tikzpicture}
 
   \end{odgovor}
 
